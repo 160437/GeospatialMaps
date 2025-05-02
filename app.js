@@ -63,7 +63,10 @@
 
 async function fetchPlacesFromAPI(query, lat, lon) {
     try {
-        const response = await fetch(`${BASE_API}/api/places?q=${query}&lat=${lat}&lon=${lon}`);
+       const response = await fetch('places.json');
+       const data = await response.json();
+     return data.results.items.filter(item => item.category.id === query);
+
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
