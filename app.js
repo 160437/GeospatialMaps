@@ -67,8 +67,7 @@ async function fetchPlacesFromAPI(query, lat, lon) {
        const data = await response.json();
      return data.results.items.filter(item => item.category.id === query);
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+       return data;
         }
         const data = await response.json();
         console.log("API Response:", data); // Confirm it's flat
