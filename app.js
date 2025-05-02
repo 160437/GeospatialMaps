@@ -63,20 +63,21 @@
 
 async function fetchPlacesFromAPI(query, lat, lon) {
     try {
-       const response = await fetch('places.json');
-       const data = await response.json();
-     return data.results.items.filter(item => item.category.id === query);
-
-       return data;
+        const response = await fetch('places.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        const data = await response.json();
-        console.log("API Response:", data); // Confirm it's flat
-        return data; // ✅ just return the array
+
+        const json = await response.json();
+        const filtered = json.results.items.filter(item => item.category.id === query);
+        console.log("✅ Filtered places:", filtered);
+        return filtered;
     } catch (error) {
-        console.error("Error fetching places from API:", error);
+        console.error("❌ Error fetching places from API:", error);
         return [];
     }
 }
+
 
 
 
