@@ -1,0 +1,15 @@
+[
+    {
+        "name_en": "Hotel Grand",
+        "name_te": "హోటల్ గ్రాండ్",
+        "type": "hotel",
+        "coordinates": [79.5945, 17.9759]
+    },
+    {
+        "name_en": "Petrol Station 1",
+        "name_te": "పెట్రోల్ స్టేషన్ 1",
+        "type": "petrol bunk",
+        "coordinates": [79.5900, 17.9735]
+    }
+]
+

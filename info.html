@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanumakonda Map with Voice Commands</title>
+    
+    <!-- Import OpenLayers CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@latest/en/v6.15.1/css/ol.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="info.css">
+
+    <!-- Import OpenLayers JS -->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@latest/en/v6.15.1/build/ol.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> LOCAL MAP </h1>
+            <p class="description">Use voice commands to speak</p>
+        </header>
+
+        <div class="controls">
+            <button class="voice-button" onclick="startListening()">🎤 Start Voice Command</button>
+            <select id="lang-select" class="lang-select">
+                <option value="en">English</option>
+                <option value="te">Telugu</option>
+            </select>
+        </div>
+        <input type="file" id="image-upload" accept="image/*" capture="environment" style="display: none;">
+        <button class="image-button" onclick="document.getElementById('image-upload').click()">📷 Capture/Upload Image</button>
+        <button onclick="handleSubmit()">Submit to CLIP</button>
+
+        <p id="command-output" class="command-output"></p> <!-- To display recognized voice command -->
+
+        <div id="map" class="map-container"></div> <!-- Map container -->
+        <div id="coordinates">Waiting for location...</div>
+        <div id="saved-images-container">
+            <h3>Saved Images</h3>
+            <ul id="saved-images-list"></ul>
+        </div>
+
+
+        <footer>
+            <p> Help us to improve  <strong>"places" </strong> on our maps.</p>
+        </footer>
+    </div>
+
+    <script src="info.js"></script>
+</body>
+</html>

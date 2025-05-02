@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanumakonda Map with Voice Commands</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@latest/en/v6.15.1/css/ol.css">
+
+    <!-- OpenLayers JS -->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@latest/en/v6.15.1/build/ol.js"></script>
+ <!--   <link rel="manifest" href="manifest.json"> -->
+</head>
+<body>
+    <h1>Geospatial Map</h1>
+    <button onclick="startListening()">🎤 Start Voice Command</button>
+    <select id="lang-select">i
+        <option value="en">English</option>
+        <option value="te">Telugu</option>
+    </select>
+    <select id="travelMode">
+        <option value="walk">🚶 Walk</option>
+        <option value="bike">🏍️ Bike</option>
+        <option value="car">🚗 Car</option>
+    </select>
+
+    <button onclick="fetchAndDownloadPDF()">Generate PDF</button>
+    <button id="installBtn" style="display:none; position: fixed; bottom: 20px; left: 20px; padding: 12px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; font-size: 16px; z-index: 9999;">Install App</button>
+
+    <script>
+        let deferredPrompt;
+
+        // Listen for the 'beforeinstallprompt' event
+        window.addEventListener('beforeinstallprompt', (e) => {
+          e.preventDefault(); // Stop the default install popup
+          deferredPrompt = e;
+
+          // Show the install button
+          const installBtn = document.getElementById('installBtn');
+          installBtn.style.display = 'block';
+
+          installBtn.addEventListener('click', () => {
+            installBtn.style.display = 'none'; // Hide the button after clicked
+            deferredPrompt.prompt(); // Show the browser install prompt
+
+            deferredPrompt.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('✅ User accepted the install prompt');
+              } else {
+                console.log('❌ User dismissed the install prompt');
+              }
+              deferredPrompt = null;
+            });
+          });
+        });
+    </script>
+
+    <select id="categoryDropdown">
+        <option value="restaurant">Restaurants</option>
+        <option value="hotel">Hotels</option>
+        <option value="college">Colleges</option>
+        <option value="hospital">Hospitals</option>
+        <option value="fuel-station">Fuel Stations</option>
+    </select>
+    
+        <!-- Repeat for other categories -->
+
+    <button id="startSimBtn">Start Travel Simulation</button>
+    <button class="oo-button" onclick="redirectToInfoPage()">Provide Information</button>
+    <div id="travelInfo"></div>
+
+    <div id="map"></div>
+    <div id="distance-display" style="margin-top: 10px; font-size: 18px; font-weight: bold;">
+        Distance to selected place: <span id="distance-value">-</span> km
+    </div>
+    <p id="command-output">Say "hotel" or "petrol" to display markers on the map.</p>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js')
+              .then(reg => console.log('Service Worker registered:', reg))
+              .catch(err => console.error('Service Worker registration failed:', err));
+          });
+        }
+    </script>
+
+
+</body>
+</html>
+
+

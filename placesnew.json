@@ -1,0 +1,128 @@
+[
+  {
+    "imageName": "parihar-medical-and-general-stores-andheri-east-mumbai-chemists-hxt3ubhagm.jpg",
+    "voiceInput": "generalstore",
+    "similarityScore": 24.978546142578125,
+    "timestamp": "2025-03-28T11:07:10.698Z"
+  },
+  {
+    "imageName": "parihar-medical-and-general-stores-andheri-east-mumbai-chemists-hxt3ubhagm.jpg",
+    "voiceInput": "general store",
+    "similarityScore": 21.564149856567383,
+    "timestamp": "2025-03-28T11:09:27.694Z",
+    "latitude": 19.1521106,
+    "longitude": 72.8545157
+  },
+  {
+    "imageName": "parihar-medical-and-general-stores-andheri-east-mumbai-chemists-hxt3ubhagm.jpg",
+    "voiceInput": " a place here",
+    "similarityScore": 26.645153045654297,
+    "timestamp": "2025-03-29T03:06:54.675Z",
+    "latitude": 19.1263091,
+    "longitude": 72.8629213
+  },
+  {
+    "imageName": "parihar-medical-and-general-stores-andheri-east-mumbai-chemists-hxt3ubhagm.jpg",
+    "voiceInput": "house is there",
+    "similarityScore": 23.422718048095703,
+    "timestamp": "2025-03-29T03:08:13.699Z",
+    "latitude": 19.1263118,
+    "longitude": 72.8629272
+  },
+  {
+    "imageName": "picture.jpg",
+    "voiceInput": "in the picture a house is there",
+    "similarityScore": 27.861984252929688,
+    "timestamp": "2025-03-29T03:10:17.853Z",
+    "latitude": 19.1262834,
+    "longitude": 72.8629045
+  },
+  {
+    "imageName": "picture.jpg",
+    "voiceInput": "ocean",
+    "similarityScore": 14.504483222961426,
+    "timestamp": "2025-03-29T03:13:31.779Z",
+    "latitude": 19.1263139,
+    "longitude": 72.862923
+  },
+  {
+    "imageName": "picture.jpg",
+    "voiceInput": "\u0c07\u0c15\u0c4d\u0c15\u0c21 \u0c12\u0c15 \u0c38\u0c2e\u0c41\u0c26\u0c4d\u0c30\u0c02 \u0c09\u0c02\u0c26\u0c3f",
+    "similarityScore": 24.1943359375,
+    "timestamp": "2025-03-29T03:14:39.885Z",
+    "latitude": 19.1262932,
+    "longitude": 72.8629357
+  },
+  {
+    "imageName": "picture.jpg",
+    "voiceInput": "\u0c07\u0c15\u0c4d\u0c15\u0c21 \u0c12\u0c15 \u0c2a\u0c3e\u0c20\u0c36\u0c3e\u0c32 \u0c09\u0c02\u0c26\u0c3f",
+    "similarityScore": 25.31589126586914,
+    "timestamp": "2025-03-29T03:18:47.125Z",
+    "latitude": 19.1262672,
+    "longitude": 72.8629396
+  },
+  {
+    "imageName": "picture.jpg",
+    "voiceInput": "yah house is there",
+    "similarityScore": 26.44575309753418,
+    "timestamp": "2025-04-03T13:28:57.504Z",
+    "latitude": 19.152123,
+    "longitude": 72.8540542
+  },
+  {
+    "imageName": "picture.jpg",
+    "voiceInput": "yeah one house is there",
+    "similarityScore": 24.360519409179688,
+    "timestamp": "2025-04-05T07:11:15.288Z",
+    "latitude": 19.1262738,
+    "longitude": 72.8629372
+  },
+  {
+    "imageName": "picture.jpg",
+    "voiceInput": "hey how is she is there",
+    "similarityScore": 0.1823866218328476,
+    "timestamp": "2025-04-05T08:26:47.067Z",
+    "latitude": 19.1262991,
+    "longitude": 72.8629284
+  },
+  {
+    "imageName": "picture.jpg",
+    "voiceInput": " okay",
+    "similarityScore": 0.1635311245918274,
+    "timestamp": "2025-04-17T18:09:47.887Z",
+    "latitude": 17.983498744019407,
+    "longitude": 79.53123102853309
+  },
+  {
+    "imageName": "picture.jpg",
+    "voiceInput": "house is there",
+    "similarityScore": 0.23497112095355988,
+    "timestamp": "2025-04-22T09:36:13.553Z",
+    "latitude": 17.98307670627975,
+    "longitude": 79.53106677370454
+  },
+  {
+    "imageName": "picture.jpg",
+    "voiceInput": "a house is added here",
+    "similarityScore": 0.23692019283771515,
+    "timestamp": "2025-04-22T10:19:13.937Z",
+    "latitude": 17.982978828538307,
+    "longitude": 79.53105424458691
+  },
+  {
+    "imageName": "hotel2.webp",
+    "voiceInput": "hair i identify one tiffin shop",
+    "similarityScore": 0.27627989649772644,
+    "timestamp": "2025-04-29T09:21:37.770Z",
+    "latitude": 17.983412664344996,
+    "longitude": 79.53130238595261
+  },
+  {
+    "imageName": "hotel3.jpg",
+    "voiceInput": "hotel is there",
+    "similarityScore": 0.22698281705379486,
+    "timestamp": "2025-04-29T17:38:38.666Z",
+    "latitude": 17.983411088568417,
+    "longitude": 79.53118402355315
+  }
+]

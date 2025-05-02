@@ -1,0 +1,127 @@
+/* General Page Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    background-color: #bbfbf9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 0.2rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.voice-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.voice-button:hover {
+    background-color: #de4386;
+}
+
+.lang-select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.command-output {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+    min-height: 40px;
+}
+
+/* Map Styling */
+.map-container {
+    width: 100%;
+    height: 500px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    font-size: 1rem;
+    color: #666;
+}
+
+footer strong {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+}
+.image-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
