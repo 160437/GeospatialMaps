@@ -64,21 +64,29 @@
 async function fetchPlacesFromAPI(query, lat, lon) {
     try {
         const response = await fetch('places.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        
+        const json = await response.json();
+
+        let items = [];
+
+        // Handle if JSON is an array (your current case)
+        if (Array.isArray(json) && json[0]?.results?.items) {
+            items = json[0].results.items;
+        }
+        // Optionally fallback if JSON is flat object with results
+        else if (json.results?.items) {
+            items = json.results.items;
         }
 
-        const json = await response.json();
-        const items = json[0]?.results?.items || []; // ✅ handles your format
-
         const filtered = items.filter(item => item.category?.id === query);
-        console.log("✅ Filtered places:", filtered);
         return filtered;
     } catch (error) {
-        console.error("❌ Error fetching places from API:", error);
+        console.error("❌ Error fetching places from local JSON:", error);
         return [];
     }
 }
+
 
 
 
