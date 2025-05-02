@@ -1,5 +1,5 @@
 // ✅ API base URL
- const BASE_API = 'http://localhost:3000';
+ //const BASE_API = 'http://localhost:3000';
  let routeGeometry = null; // Global holder
 
  var map = new ol.Map({
@@ -652,7 +652,10 @@ async function drawRoute(startCoords, endCoords) {
     }
 
 }
-    simulateMovementFromRoute(routeGeometry); // <-- Add this line after drawing
+   if (routeGeometry) {
+    simulateMovementFromRoute(routeGeometry);
+}
+ // <-- Add this line after drawing
 // Add a variable to store the live location marker
 let liveLocationMarker = null;
 
