@@ -69,7 +69,9 @@ async function fetchPlacesFromAPI(query, lat, lon) {
         }
 
         const json = await response.json();
-        const filtered = json.results.items.filter(item => item.category.id === query);
+        const items = json[0]?.results?.items || []; // ✅ handles your format
+
+        const filtered = items.filter(item => item.category?.id === query);
         console.log("✅ Filtered places:", filtered);
         return filtered;
     } catch (error) {
@@ -77,6 +79,7 @@ async function fetchPlacesFromAPI(query, lat, lon) {
         return [];
     }
 }
+
 
 
 
