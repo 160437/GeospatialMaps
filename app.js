@@ -79,7 +79,11 @@ async function fetchPlacesFromAPI(query, lat, lon) {
             items = json.results.items;
         }
 
-        const filtered = items.filter(item => item.category?.id === query);
+        const filtered = items.filter(item =>
+    item.category?.id?.toLowerCase().includes(query.toLowerCase()) ||
+    item.category?.title?.toLowerCase().includes(query.toLowerCase())
+);
+
         return filtered;
     } catch (error) {
         console.error("❌ Error fetching places from local JSON:", error);
